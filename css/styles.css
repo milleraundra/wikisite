@@ -1,0 +1,23 @@
+.page-header h1 {
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+#home {
+  margin-top: 20px;
+}
+
+.col-sm-4 {
+  border: solid 2px;
+  border-color: black;
+  background-color: #f2f2f2;
+  margin: 5px;
+}
+
+.row-eq-height {
+  display: flex;
+  margin-top: 20px;
+}
