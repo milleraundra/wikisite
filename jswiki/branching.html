@@ -16,22 +16,61 @@
       <h2>Branching</h2><!--Add new heading2 -->
       <h3>JavaScript</h3><!--Add new heading3 -->
       <div class="define">
-        <p>Branching is a series of if/else statements run by the browser. When the method is run, the computer is checking to see if the statement in the parenthesis is either true or false. Depending on the conditions, a true statement will run. If it's not true, the 'else' keyword assignedt to a seperate statement will run. </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <p>Branching is a series of if/else statements run by the browser. When the method is run, the computer is checking to see if the statement in the parenthesis is either true or false. If the conditions are true, a statement will run. If the conditions are false, the 'else' keyword assigned to a seperate statement will run. </p>
       </div>
 
       <div class="example">
         <p>
-
+          Here is an example of a conditional branch.
         </p>
         <pre> <!--Add code from .display here -->
+          $(function(){
+            $("form#form").submit(function(event) {
 
+            var gender = $('select#gender').val();
+            var height = parseInt($('input#height').val());
+
+            var status = null;
+
+          //male height calculations
+            if (gender === 'male'){
+              if (height >= 74) {
+                status = 'tall'
+              }
+              else if (height >= 67) {
+                status = 'average'
+              }
+              else {
+                status = 'short'
+              }
+            }
+            ---
+            $('#reveal').show();
+            $('#outcome').text(status);
+
+            event.preventDefault();
+            });
+
+          });
         </pre>
       </div>
 
       <div class="display"> <!--link to demonstration code -->
+
+        <h3>Fill out the form below to learn if you are tall, short, or average!</h3>
+        <form id="form">
+          <label for="gender">Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label for="height">Height in inches:</label>
+          <input id="height" type="text">
+
+          <button class="btn btn-default" type="submit" id="result" name="button">Find out now!</button>
+        </form>
+
+      <p id="reveal">Congratulations! You are <span id="outcome"></span>!</p>
 
       </div>
 
