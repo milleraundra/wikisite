@@ -11,7 +11,9 @@ _A site that lists, defines, and describes numerous programming terms and concep
 ## Setup/Installation Requirements
 
 ###To View:
-Visit this link:
+1. Clone this repository.
+2. Navigate to the top level of the project directory.
+3. Open the `index.html` file in your browser.
 
 ###To Edit:
 1. Visit this repository:
@@ -22,7 +24,7 @@ Visit this link:
 
 ## Known Bugs
 
-There are no known bugs at this time.
+PROJECT INCOMPLETE. Only a few JavaScript pages are functional.
 
 ## Support and contact details
 
